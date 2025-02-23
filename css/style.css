@@ -1,0 +1,848 @@
+/*! HTML5 Boilerplate v9.0.1 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .visually-hidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visually-hidden.focusable:active,
+.visually-hidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * The use of `table` rather than `block` is only necessary if using
+ * `::before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wrapper {
+  padding: 96px 77px;
+  background-color: #222;
+}
+
+.wrapper-main {
+  padding: 45px 73px;
+  background: #D9D9D9;
+  border-radius: 5px;
+  max-width: 1650px;
+  margin: 0 auto;
+}
+
+header {
+  height: 87px;
+}
+.header-logo {
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  font: normal 36px 'Bayon', sans-serif;
+  font-weight: 400;
+  line-height: 125px;
+  border: 3px solid #000;
+  border-radius: 50%;
+}
+
+
+
+.header-links-link {
+  font: normal 400 20px 'Bayon', sans-serif;
+  color: #6E6E6E;
+  line-height: normal;
+  transition: 0.7s;
+}
+
+.header-links-link:hover {
+  font: normal 400 20px 'Bayon', sans-serif;
+  color: black;
+  line-height: normal;
+  transition: 0.7s;
+}
+
+.header-links-link::after {
+  content: "\2223";
+  width: 27px;
+  margin: 30px;
+}
+
+.header-links-link:last-child:after {
+  content: "";
+}
+
+.header-info-faq {
+  font: normal 400 20px 'Bayon', sans-serif;
+  color: #6E6E6E;
+  transition: 0.7s;
+}
+
+.header-info-faq:hover {
+  font: normal 400 20px 'Bayon', sans-serif;
+  color: black;
+  transition: 0.7s;
+}
+
+.header-info-faq:after {
+  content: "\2223";
+  width: 27px;
+  margin: 30px;
+}
+
+.header-info-btn {
+  color: #000;
+  font: normal 400 18px 'Bayon', sans-serif;
+  line-height: normal;
+  border-radius: 5px;
+  border: 4px solid #000;
+  padding: 15px 20px;
+  transition: 0.5s;
+}
+
+.header-info-btn:hover {
+  background: black;
+  color: #fff;
+  transition: 0.5s;
+  border: 4px solid transparent;
+}
+
+
+
+.main-container {
+  padding: 50px 20px 50px 70px;
+  border: 2px solid #B8B8B8;
+  position: relative;
+}
+
+.main-container h1 {
+  font: 400 96px 'Bayon', sans-serif;
+  line-height: 125%; /* 120px */
+  color: #000;
+  width: 646px;
+  margin: 0;
+
+}
+
+.main-border1 {
+  position: absolute;
+  left: -3px;
+  top: -4px;
+  width: 30px;
+  height: 30px;
+  /*border-left: 5px solid #000;*/
+  /*border-top: 5px solid #000;*/
+}
+
+
+.main-border1::before {
+  content: "";
+  position: absolute;
+  height: 5px;
+  width: 30px;
+  background: #000;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+}
+
+.main-border1::after {
+  content: "";
+  position: absolute;
+  height: 30px;
+  width: 5px;
+  background: #000;
+  top: 1px;
+  left: 0;
+  border-radius: 10px;
+}
+
+  .main-border2 {
+  position: absolute;
+  right: -3px;
+  top: -4px;
+  width: 30px;
+  height: 30px;
+}
+
+.main-border2::before {
+  content: "";
+  position: absolute;
+  height: 5px;
+  width: 30px;
+  background: #000;
+  top: 0;
+  right: 0;
+  border-radius: 10px;
+}
+
+.main-border2::after {
+  content: "";
+  position: absolute;
+  height: 30px;
+  width: 5px;
+  background: #000;
+  top: 1px;
+  right: 0;
+  border-radius: 10px;
+}
+
+
+.main-border3 {
+  position: absolute;
+  right: -3px;
+  bottom: -4px;
+  width: 30px;
+  height: 30px;
+}
+
+.main-border3::before {
+  content: "";
+  position: absolute;
+  height: 5px;
+  width: 30px;
+  background: #000;
+  bottom: 0;
+  right: 0;
+  border-radius: 10px;
+}
+
+.main-border3::after {
+  content: "";
+  position: absolute;
+  height: 30px;
+  width: 5px;
+  background: #000;
+  bottom: 1px;
+  right: 0;
+  border-radius: 10px;
+}
+
+.main-border4 {
+  position: absolute;
+  left: -3px;
+  bottom: -4px;
+  width: 30px;
+  height: 30px;
+}
+
+.main-border4::before {
+  content: "";
+  position: absolute;
+  height: 5px;
+  width: 30px;
+  background: #000;
+  bottom: 0;
+  left: 0;
+  border-radius: 10px;
+}
+
+.main-border4::after {
+  content: "";
+  position: absolute;
+  height: 30px;
+  width: 5px;
+  background: #000;
+  bottom: 1px;
+  left: 0;
+  border-radius: 10px;
+}
+
+.main-container-content-text {
+  display: flex;
+  align-items: flex-end;
+}
+
+.main-container-content-text p {
+  margin-right: 45px;
+  width: 443px;
+  color: #585858;
+  font: normal 400 16px 'Cabin Condensed', sans-serif;
+  line-height: 150%; /* 24px */
+}
+
+
+.main-container-content-svg {
+  position: relative;
+  width: 128px;
+  height: 128px;
+}
+
+.svg1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 128px;
+}
+
+.svg2 {
+  position: absolute;
+  top: 4px;
+  left: 0;
+  width: 100%;
+  height: 120px;
+}
+
+.main-container-photo img {
+  width: 730px;
+  height: 380px;
+  flex-shrink: 0;
+  padding-right: 20px;
+}
+
+.main-container-content-btn {
+  margin-top: 24px;
+}
+
+.main-container-content-btn a {
+  color: #D9D9D9;
+  font: normal 400 18px 'Bayon', sans-serif;
+  line-height: normal;
+  border-radius: 5px;
+  background: #000;
+  width: 197px;
+  height: 64px;
+  flex-shrink: 0;
+  padding: 15px 21px;
+  transition: 0.7s;
+  box-sizing: border-box;
+  border: 4px solid transparent;
+}
+
+.main-container-content-btn a:hover {
+  border: 4px solid black;
+  color:black;
+  background: #D9D9D9;
+  box-sizing: border-box;
+  transition: 0.7s;
+}
+
+.content-wrapper {
+  position: relative;
+  margin-top: 46px;
+  margin-right: 40px;
+  border: 4px solid #B8B8B8;
+}
+
+.content-border1 {
+  position: absolute;
+  top: -3px;
+  left: -4px;
+  width: 30px;
+  height: 30px;
+}
+
+.content-border1::before {
+  content: "";
+  position: absolute;
+  height: 5px;
+  width: 30px;
+  background: #000;
+  top: -1px;
+  left: 0;
+  border-radius: 10px;
+}
+
+.content-border1::after {
+  content: "";
+  position: absolute;
+  height: 30px;
+  width: 5px;
+  background: #000;
+  top: -1px;
+  left: 0;
+  border-radius: 10px;
+}
+
+
+
+.content-border2 {
+  position: absolute;
+  top: -3px;
+  right: -4px;
+  width: 30px;
+  height: 30px;
+}
+
+.content-border2::before {
+  content: "";
+  position: absolute;
+  height: 5px;
+  width: 30px;
+  background: #000;
+  top: -1px;
+  right: 0;
+  border-radius: 10px;
+}
+
+.content-border2::after {
+  content: "";
+  position: absolute;
+  height: 30px;
+  width: 5px;
+  background: #000;
+  top: -1px;
+  right: 0;
+  border-radius: 10px;
+}
+
+.content-border3 {
+  position: absolute;
+  bottom: -3px;
+  right: -4px;
+  width: 30px;
+  height: 30px;
+}
+
+.content-border3::before {
+  content: "";
+  position: absolute;
+  height: 5px;
+  width: 30px;
+  background: #000;
+  bottom: -1px;
+  right: 0;
+  border-radius: 10px;
+}
+
+.content-border3::after {
+  content: "";
+  position: absolute;
+  height: 30px;
+  width: 5px;
+  background: #000;
+  bottom: -1px;
+  right: 0;
+  border-radius: 10px;
+}
+
+.content-border4 {
+  position: absolute;
+  bottom: -3px;
+  left: -4px;
+  width: 30px;
+  height: 30px;
+}
+
+.content-border4::before {
+  content: "";
+  position: absolute;
+  height: 5px;
+  width: 30px;
+  background: #000;
+  bottom: -1px;
+  left: 0;
+  border-radius: 10px;
+}
+
+.content-border4::after {
+  content: "";
+  position: absolute;
+  height: 30px;
+  width: 5px;
+  background: #000;
+  bottom: -1px;
+  left: 0;
+  border-radius: 10px;
+}
+
+
+.main-container-content-info {
+  display: flex;
+  align-items: center;
+  padding: 24px 21px 23px 31px;
+  gap: 100px;
+}
+
+.rec-svg {
+  padding-top: 18px;
+}
+
+.rec-span {
+  color: #000;
+  font: normal 700 16px 'Cabin Condensed', sans-serif;
+  line-height: normal;
+}
+
+.rec-link {
+  color: #585858;
+  font: normal 16px 'Cabin Condensed', sans-serif;
+  font-weight: 600;
+  line-height: normal;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
+  transition: 0.7s;
+}
+
+.rec-link:hover {
+  color: black;
+  transition: 0.7s;
+}
+
+.receptions {
+  position: relative;
+}
+
+
+.receptions h3 {
+  color: #000;
+  padding-top: 5px;
+  font: normal 28px 'Bayon', sans-serif;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0;
+}
+
+.receptions p {
+  margin: 0;
+}
+
+
+.receptions:last-child:before {
+  display: block;
+  border-right: 4px solid #585858;
+  z-index: 999;
+  content: '';
+  position: absolute;
+  height: 43px;
+  top: 50%;
+  margin-top: -23px;
+  left: -25%;
+}
+
+.footer-content {
+  position: relative;
+  padding-top: 74px;
+}
+
+
+.footer-content-text h2 {
+  position: relative;
+  margin: 0;
+  color: #0B1026;
+  font: 400 64px 'Bayon', sans-serif;
+  padding-right: 48px;
+}
+
+.footer-content-text h2::after {
+  content: '';
+  position: absolute;
+  border-radius: 10px;
+  top: 50%;
+  right: -47px;
+  height: 4px;
+  width: 42px;
+  background: #585858;
+}
+
+.footer-content-text {
+  margin-right: 10px;
+}
+
+.footer-content-info {
+  display: flex;
+  width: 100%;
+  max-width: 1060px;
+  justify-content: space-between;
+  border-radius: 5px;
+  background: #0B1026;
+  flex-shrink: 0;
+  padding: 40px 32px;
+}
+
+.content-info-item {
+  display: flex;
+  column-gap: 32px;
+}
+
+.footer-content-info-icon svg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.footer-content-info-text h3 {
+  position: relative;
+  color: #FFF;
+  font: 400 24px "Bayon", sans-serif;
+  line-height: 125%;
+  margin: 0;
+  padding-left: 32px;
+}
+
+.footer-content-info-text h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  background: #fff;
+}
+
+.footer-content-info-text {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+}
+
+.footer-content-info-text p {
+  color: #FFF;
+  font: 400 16px "Cabin Condensed", sans-serif;
+  width: 210px;
+  margin: 0;
+}
+
